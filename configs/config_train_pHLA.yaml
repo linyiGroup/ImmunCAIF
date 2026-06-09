@@ -1,0 +1,31 @@
+
+# ImmuCAA
+# the path for saving train\test\validation datasets
+dataPath: "./datasets/data_pHLA/"
+
+
+# device
+device: "cuda:0"
+numWorker: 16
+
+# the max length of each seq. 
+seqMaxLength: 34
+
+# the path for saving ESMc embedding dict
+esmcEmbeddingDictPath: "./models/ESMc/ESMcEmbedding/embeddingDict.pkl"
+# the path for saving ESMc embeddings
+esmcEmbeddingPath: "./models/ESMc/ESMcEmbedding/"
+# the path for saving logs
+logPath: "./outputs/"
+# the path for saving model states
+modelStatePath: "./outputs/"
+
+dim_esm: 960
+
+# settings for training and loss function
+epochs: 30
+learningRate: 1e-3
+
+# batch size for dataloader in the train and test stages
+batchSize: 4096
+# batchSize: 10

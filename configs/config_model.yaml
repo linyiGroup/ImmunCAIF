@@ -1,0 +1,9 @@
+
+# settings for the module
+input_dim: 960 # ESM dim
+feat_dim: 64
+# the number of heads for cross attention
+num_heads: 1
+seqMaxLength: 34
+
+modelStatePath: "./models/final_model_state/"
