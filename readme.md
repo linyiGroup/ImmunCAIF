@@ -95,7 +95,7 @@ The paper has not been published
 <!-- If you find this code useful in your research, please cite our work:
 ```plaintext
 @article{ImmunCAIF,
-  title={CAIF: Cross-Adaptive Attention for Accurate HLA and TCR-Peptide Binding Prediction},
+  title={CAIF:  for Accurate HLA and TCR-Peptide Binding Prediction},
   author={[Your Name]},
   journal={[Journal Name]},
   year={[Year]}
