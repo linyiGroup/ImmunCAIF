@@ -1,15 +1,15 @@
 
 
-# (ImmunCAIF) CAIF: Cross-Adaptive Attention for Multi-Source Feature Fusion in Unified Prediction of Antigen Binding to HLA and TCR
+# CAIF: Cross-Adaptive Attention for Multi-Source Feature Fusion in Unified Prediction of Antigen Binding to HLA and TCR
 
-This repository contains the official implementation of **ImmunCAIF**, a deep learning framework for accurate prediction of peptide binding to HLA molecules and T-cell receptors (TCRs).
+This repository contains the official implementation of **CAIF**, a deep learning framework for accurate prediction of peptide binding to HLA molecules and T-cell receptors (TCRs).
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-ImmunCAIF/
+CAIF/
 ├── 01_ESMcEmbeddingGeneration.py       # Precompute ESM-based embeddings for sequences
 ├── 02_train_evaluation_pHLA.py         # Train & evaluate on antigen-HLA binding task
 ├── 02_train_evaluation_pTCR.py          # Train & evaluate on antigen-TCR binding task
@@ -27,7 +27,7 @@ ImmunCAIF/
 ├── models/
 │   ├── ESMc/                           # ESM-based protein embedding modules
 │   ├── final_model_state/              # Saved model checkpoints and training states
-│   └── models.py                       # Implementation of the ImmunCAIF model
+│   └── models.py                       # Implementation of the CAIF model
 ├── utils/
 │   ├── embedding.py                    # Embedding-related helper functions
 │   ├── ESMcEmbedding.py                # ESM embedding wrapper and utilities
@@ -94,7 +94,7 @@ python 03_evaluation_pTCR.py
 The paper has not been published
 <!-- If you find this code useful in your research, please cite our work:
 ```plaintext
-@article{ImmunCAIF,
+@article{CAIF,
   title={CAIF:  for Accurate HLA and TCR-Peptide Binding Prediction},
   author={[Your Name]},
   journal={[Journal Name]},
