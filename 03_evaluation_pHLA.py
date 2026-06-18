@@ -11,7 +11,7 @@ import pandas as pd
 
 def valid_pHLA(config, config_model):
     model = PHLAModel(config_model)
-    # model.load_state_dict(torch.load("./models/final_model_state/pHLA_model.pth"))
+    model.load_state_dict(torch.load("./models/final_model_state/pHLA_model.pth"))
     model.to(config["device"])
     
     test_set = PHLADataset(csv_path=config["dataPath"]+"test_set.csv", config=config)
