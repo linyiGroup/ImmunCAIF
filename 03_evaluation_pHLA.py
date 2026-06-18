@@ -11,15 +11,15 @@ import pandas as pd
 
 def valid_pHLA(config, config_model):
     model = PHLAModel(config_model)
-    model.load_state_dict(torch.load("/linyi/workspace/TCRpHLA/CAA/models/final_model_state"))
+    # model.load_state_dict(torch.load("./models/final_model_state/pHLA_model.pth"))
     model.to(config["device"])
     
-    test_set = PHLADataset("/linyi/workspace/TCRpHLA/CAA/XL/评估/"+"test_set.csv", config=config)
+    test_set = PHLADataset(csv_path=config["dataPath"]+"test_set.csv", config=config)
     test_loader = DataLoader(test_set, batch_size=config["batchSize"], shuffle=False, num_workers=config["numWorker"])
     test_performance = validate(model, test_loader, None, config["device"])
     test_performance = pd.DataFrame([test_performance], index=["test"])
 
-    external_set = PHLADataset("/linyi/workspace/TCRpHLA/CAA/XL/评估/"+"external_test_set.csv", config=config)
+    external_set = PHLADataset(csv_path=config["dataPath"]+"external_test_set.csv", config=config)
     external_loader = DataLoader(external_set, batch_size=config["batchSize"], shuffle=False, num_workers=config["numWorker"])
     external_performance = validate(model, external_loader, None, config["device"])
     external_performance = pd.DataFrame([external_performance], index=["external test"])
