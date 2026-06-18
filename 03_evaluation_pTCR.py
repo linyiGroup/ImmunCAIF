@@ -10,8 +10,9 @@ import pandas as pd
 
 
 def valid_pTCR(config, config_model):
-    model = PTCRModel(config_model).to(config["device"])
-    model.load_state_dict(torch.load(config_model["modelStatePath"] + "pTCR_model.pth"))
+    model = PTCRModel(config_model)
+    model.load_state_dict(torch.load("./models/final_model_state/pHLA_model.pth" + "pTCR_model.pth"))
+    model.to(config["device"])
     
     test_set = PTCRDataset(csv_path=config["dataPath"]+"test_set.csv", config=config)
     test_loader = DataLoader(test_set, batch_size=config["batchSize"], shuffle=False, num_workers=config["numWorker"])
