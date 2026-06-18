@@ -1,6 +1,4 @@
 
-# ImmuCAA
-
 
 # the path for saving train\test\validation datasets
 dataPath: "./datasets/data_pTCR/"
