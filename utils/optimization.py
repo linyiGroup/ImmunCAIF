@@ -42,8 +42,7 @@ def compute_evaluation_scores(label_list, prediction_list, score_list):
         "tp": tp,
     }
 
-
-def validate(model, val_loader, loss_function=None,file=None, device="cpu"):
+def validate(model, val_loader, loss_function=None, device="cpu"):
     label_list = []
     prediction_list = []
     score_list = []
@@ -68,13 +67,8 @@ def validate(model, val_loader, loss_function=None,file=None, device="cpu"):
     performance = compute_evaluation_scores(label_list, prediction_list, score_list)
     if loss_function is not None:
         performance["loss"] = loss_sum / len(label_list)
-    eval = pd.DataFrame({
-    'label': label_list,
-    'prediction': prediction_list,
-    'score': score_list
-        })
-    eval.to_csv(file, index=False)
-    return performance,eval
+    return performance
+
 
 
 def train_one_epoch(model, train_loader, loss_function, optimizer, device):
