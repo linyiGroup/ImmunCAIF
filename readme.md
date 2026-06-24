@@ -1,6 +1,6 @@
 
 
-# CAIF: A Unified Deep Learning Framework Enhancing Multi-Source Feature Fusion for Predicting Antigen Binding to HLA and TCR
+# CAIF: Cross-Adaptive Interaction Fusion for Predicting Antigen Binding to HLA and TCR
 
 This repository contains the official implementation of **CAIF**, a unified deep learning framework, enhancing Multi-Source Feature Fusion, for predicting peptide binding to HLA molecules and T-cell receptors (TCRs).
 
